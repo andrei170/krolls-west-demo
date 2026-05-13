@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kroll's West &middot; Before vs After &middot; AG1 Consulting</title>
+<meta name="description" content="Kroll's West has charcoal-grilled butter burgers across from Lambeau Field since 1936. Three generations of the Wier family. AI search names Solly's Grille first on Wisconsin butter burger queries. Audit and 90-day plan to capture the Wisconsin butter burger funnel and Packers gameday tourism pipeline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #f5ede2;
+  --bone: #ece1cf;
+  --crust: #a8552b;
+  --crust-deep: #7a3c1c;
+  --char: #2c1a10;
+  --oven: #3a2618;
+  --oven-deep: #251510;
+  --maroon: #7a2c2c;
+  --maroon-deep: #5a1f1f;
+  --mustard: #b89968;
+  --mustard-deep: #94794d;
+  --supper: #2c4a3a;
+  --ink: #1c130f;
+  --ink-soft: #4a3a30;
+  --line: #d8c7ad;
+  --green: #4a7a3f;
+  --white: #ffffff;
+  --display: 'Bebas Neue', sans-serif;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--cream); color: var(--ink); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--crust); text-decoration: none; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+.topbar { background: var(--oven-deep); color: var(--cream); padding: 12px 0; font-size: 13px; }
+.topbar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.topbar-tag { color: var(--mustard); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; font-size: 11px; }
+
+.hero { padding: 110px 0 80px; background: var(--cream); position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 5%; right: -10%; width: 720px; height: 720px; background: radial-gradient(circle, rgba(168, 85, 43, 0.22), transparent 65%); filter: blur(60px); pointer-events: none; }
+.hero-grid { max-width: 1080px; margin: 0 auto; position: relative; z-index: 2; }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mustard-deep); font-weight: 700; margin-bottom: 26px; display: block; }
+.hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(42px, 6.2vw, 78px); line-height: 1.02; letter-spacing: -0.015em; margin-bottom: 32px; color: var(--crust); }
+.hero h1 em { font-style: italic; color: var(--mustard-deep); }
+.hero p { color: var(--ink-soft); font-size: 19px; max-width: 860px; line-height: 1.55; }
+
+.section { padding: 90px 0; position: relative; }
+.section.alt { background: var(--bone); }
+.section.dark { background: var(--oven); color: var(--cream); }
+.section.dark .section-title { color: var(--mustard); }
+.section.dark .section-sub { color: rgba(245, 237, 226, 0.78); }
+.section-title { font-family: var(--serif); font-weight: 600; font-size: clamp(32px, 4vw, 56px); letter-spacing: -0.015em; line-height: 1.05; margin-bottom: 18px; color: var(--crust); }
+.section-title em { font-style: italic; color: var(--mustard-deep); }
+.section.dark .section-title em { color: var(--mustard); }
+.section-sub { color: var(--ink-soft); font-size: 17px; margin-bottom: 56px; max-width: 860px; line-height: 1.6; }
+
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.compare-card { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: var(--white); transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+.compare-card:hover { border-color: var(--mustard); transform: translateY(-4px); box-shadow: 0 20px 56px rgba(168, 85, 43, 0.16); }
+.compare-label { padding: 16px 24px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; }
+.compare-label.current { background: rgba(122, 44, 44, 0.10); color: var(--maroon); border-bottom: 1px solid rgba(122, 44, 44, 0.18); }
+.compare-label.new { background: rgba(184, 153, 104, 0.18); color: var(--mustard-deep); border-bottom: 1px solid var(--mustard); }
+.compare-preview { aspect-ratio: 16/10; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.compare-preview-content { position: relative; z-index: 2; text-align: center; padding: 32px; }
+.compare-preview-content h3 { font-family: var(--display); font-size: 40px; font-weight: 400; letter-spacing: 2px; }
+.compare-preview-content p { font-family: var(--serif); font-size: 16px; font-style: italic; margin-top: 12px; }
+.compare-preview.current-bg { background: linear-gradient(135deg, var(--bone), var(--cream)); }
+.compare-preview.current-bg .compare-preview-content h3 { color: var(--maroon); }
+.compare-preview.current-bg .compare-preview-content p { color: var(--ink-soft); }
+.compare-preview.new-bg { background: linear-gradient(135deg, var(--mustard), var(--crust) 55%, var(--char)); }
+.compare-preview.new-bg .compare-preview-content h3 { color: var(--cream); }
+.compare-preview.new-bg .compare-preview-content p { color: rgba(245, 237, 226, 0.88); }
+.compare-body { padding: 28px 32px; }
+.compare-body h4 { font-family: var(--serif); font-size: 26px; font-weight: 600; margin-bottom: 10px; color: var(--crust); }
+.compare-body p { color: var(--ink-soft); font-size: 14px; margin-bottom: 22px; }
+.compare-body ul { list-style: none; margin-bottom: 24px; }
+.compare-body li { padding: 7px 0; font-size: 14px; color: var(--ink-soft); display: flex; align-items: flex-start; gap: 10px; }
+.compare-body li::before { font-size: 12px; margin-top: 2px; flex-shrink: 0; font-weight: 700; }
+.current li::before { content: '\2717'; color: var(--maroon); }
+.new li::before { content: '\2713'; color: var(--green); }
+.compare-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; transition: all 0.25s; }
+.cta-current { border: 2px solid var(--maroon); color: var(--maroon); }
+.cta-current:hover { background: var(--maroon); color: var(--cream); }
+.cta-new { background: var(--crust); color: var(--cream); }
+.cta-new:hover { background: var(--mustard); color: var(--oven-deep); }
+
+.bombshell-section { background: var(--oven); color: var(--cream); }
+.bombshell-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: center; }
+.bombshell-stat { font-family: var(--display); font-size: clamp(120px, 14vw, 220px); font-weight: 400; line-height: 0.9; color: var(--mustard); letter-spacing: 2px; }
+.bombshell-stat-label { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245, 237, 226, 0.62); margin-top: 18px; font-weight: 600; }
+.bombshell-content h2 { font-family: var(--serif); font-size: clamp(34px, 4.2vw, 58px); font-weight: 600; line-height: 1.06; margin-bottom: 26px; color: var(--cream); }
+.bombshell-content h2 em { font-style: italic; color: var(--mustard); }
+.bombshell-content p { color: rgba(245, 237, 226, 0.86); font-size: 17px; line-height: 1.7; margin-bottom: 16px; }
+.bombshell-content p strong { color: var(--cream); font-weight: 700; }
+.competitor-list { margin-top: 28px; padding: 22px 26px; background: rgba(184, 153, 104, 0.10); border-left: 2px solid var(--mustard); border-radius: 2px; }
+.competitor-list-title { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mustard); font-weight: 700; margin-bottom: 14px; }
+.competitor-row { display: flex; justify-content: space-between; padding: 7px 0; font-size: 14px; color: rgba(245, 237, 226, 0.78); border-bottom: 1px solid rgba(184, 153, 104, 0.12); }
+.competitor-row:last-child { border-bottom: none; }
+.competitor-row .rank { color: var(--mustard); font-weight: 700; }
+
+.plan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.plan-card { padding: 32px; background: var(--white); border: 1px solid var(--line); border-radius: 4px; transition: all 0.3s; position: relative; }
+.plan-card:hover { border-color: var(--mustard); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(168, 85, 43, 0.12); }
+.plan-num { font-family: var(--display); font-size: 14px; color: var(--crust); font-weight: 400; margin-bottom: 14px; display: block; letter-spacing: 2px; }
+.plan-card h4 { font-family: var(--serif); font-size: 24px; font-weight: 600; line-height: 1.15; margin-bottom: 12px; color: var(--crust); }
+.plan-card p { color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+.plan-week { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mustard-deep); font-weight: 700; margin-top: 18px; display: inline-block; }
+
+.scorecard { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: var(--white); }
+.scorecard-header { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 22px 32px; background: var(--bone); border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--crust); }
+.scorecard-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 18px 32px; border-bottom: 1px solid var(--line); align-items: center; }
+.scorecard-row:last-child { border-bottom: none; }
+.scorecard-row:hover { background: var(--cream); }
+.scorecard-label { font-size: 15px; color: var(--crust); }
+.scorecard-cell { font-size: 14px; }
+.scorecard-cell.current { color: var(--maroon); }
+.scorecard-cell.new { color: var(--green); font-weight: 700; }
+
+.cta-section { padding: 120px 0; text-align: center; background: var(--cream); }
+.cta-section h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 64px); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 26px; line-height: 1.05; color: var(--crust); }
+.cta-section h2 em { font-style: italic; color: var(--mustard-deep); }
+.cta-section p { color: var(--ink-soft); font-size: 17px; margin-bottom: 40px; max-width: 680px; margin-left: auto; margin-right: auto; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-button { display: inline-flex; align-items: center; gap: 8px; padding: 18px 36px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.25s; }
+.cta-button.primary { background: var(--crust); color: var(--cream); }
+.cta-button.primary:hover { background: var(--crust-deep); transform: translateY(-2px); }
+.cta-button.ghost { border: 2px solid var(--line); color: var(--crust); background: var(--white); }
+.cta-button.ghost:hover { border-color: var(--mustard); color: var(--mustard-deep); }
+
+footer { padding: 32px 0; border-top: 1px solid var(--line); text-align: center; font-size: 12px; color: var(--ink-soft); background: var(--bone); }
+footer a { color: var(--crust); }
+
+@media (max-width: 1024px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .bombshell-grid { grid-template-columns: 1fr; gap: 32px; }
+  .plan-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .plan-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span class="topbar-tag">Search Audit Report &middot; Prepared by AG1 Consulting</span>
+    <span>For the Wier Family at Kroll's West</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <span class="eyebrow">Prepared for the Wier Family &middot; AG1 Consulting</span>
+      <h1>Charcoal butter burgers since 1936. Three generations of the Wier family. <em>AI search names Solly's first.</em></h1>
+      <p>Kroll's West has charcoal-grilled butter burgers across from Lambeau Field in Green Bay. Harry and Caroline Kroll founded the restaurant in 1936. The Wier family has stewarded it for three generations, and Mike Wier has spent nearly six decades on the line. The packers.com Lambeau dining guide names Kroll's West as the gameday stop. When ChatGPT, Perplexity, and Google AI Overviews are asked the five queries a Wisconsin butter burger fan, a Packers tailgater, or a Green Bay tourist types tonight from a hotel near Lambeau, Kroll's surfaces in 1 of 5. The other four go to Solly's Grille, Al's Hamburger Shop, AJ Bombers, and Culver's. The 89 years and the charcoal grill are real. The structured data telling AI search the brand exists is not.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Kroll's West: <em>before vs after</em></h2>
+    <p class="section-sub">Same charcoal grill. Same Wier family. Same address across from Lambeau Field since 1974. Two very different chances of being the burger a Wisconsin local, a Packers tailgater, a wholesale partner, or an AI search engine finds first when they ask tonight.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label current">Today &middot; Live Site</div>
+        <div class="compare-preview current-bg">
+          <div class="compare-preview-content">
+            <h3>krollswest.com</h3>
+            <p>Currently live &middot; Click to view</p>
+          </div>
+        </div>
+        <div class="compare-body current">
+          <h4>What's there now</h4>
+          <p>The site shows the S. Ridge Road address, hours from 10:30am, the menu, and an "Our History" page that names Harry and Caroline Kroll, the Labor Temple basement years, and the Wier family. The AEO infrastructure that decides who wins the Wisconsin butter burger search, the Packers gameday tourist, and the heritage-restaurant buyer is missing.</p>
+          <ul>
+            <li>Cited in 1 of 5 AI-search queries we ran (hyperlocal "restaurants near Lambeau Field" only, never on "best butter burger Wisconsin" or "oldest family-owned restaurant Green Bay" queries)</li>
+            <li>No dedicated /charcoal-butter-burger-since-1936 landing page (the single most-citable, most-defensible heritage claim in the category)</li>
+            <li>No FAQPage, LocalBusiness, FoodEstablishment, or Product schema with the 1936 founding date and Wier-family stewardship surfaced</li>
+            <li>No three-generation Wier family heritage page using Harry and Caroline Kroll, Pat, Bobbie and Mike Wier as a structured-data authority asset</li>
+            <li>No Packers gameday destination pillar despite the packers.com and onmilwaukee.com Lambeau dining guides naming Kroll's directly</li>
+            <li>No "Laughing Ladies" tradition page despite WFRV running a Dish feature in February 2026</li>
+            <li>Friday fish fry and broasted chicken on the menu but no schema-marked supper-club credential funnel</li>
+            <li>Competitors winning AI Overview citations: Solly's Grille, Al's Hamburger Shop, AJ Bombers, Culver's, Dotty Dumpling's Dowry</li>
+          </ul>
+          <a href="https://www.krollswest.com/" target="_blank" rel="noopener" class="compare-cta cta-current">View Live Site &rarr;</a>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="compare-label new">Proposed &middot; Heritage Funnel + AEO Build</div>
+        <div class="compare-preview new-bg">
+          <div class="compare-preview-content">
+            <h3>The Lambeau gameday engine</h3>
+            <p>Click to explore the live demo &rarr;</p>
+          </div>
+        </div>
+        <div class="compare-body new">
+          <h4>What we'd ship</h4>
+          <p>An AEO-targeted "Wisconsin's original charcoal butter burger" funnel plus the structural data that gets Kroll's cited in AI Overview answers about Wisconsin butter burgers, best burger Green Bay, Packers gameday food, and heritage family-owned restaurants Wisconsin. No platform migration. Installs in less than 7 days.</p>
+          <ul>
+            <li>Dedicated /charcoal-butter-burger-since-1936 landing page with the 1931 hotel origin, the 1936 first restaurant, the Labor Temple years, and the three-generation Wier funnel</li>
+            <li>Full FAQPage + LocalBusiness + FoodEstablishment + Restaurant schema across the site with the 1936 founding date surfaced</li>
+            <li>Three-generation Wier family heritage page (Harry and Caroline Kroll, Pat, Bobbie and Mike Wier) schema-marked for AI authority</li>
+            <li>Lambeau gameday destination pillar capturing the packers.com Lambeau dining-guide traffic and the 6M+ annual Green Bay tourism visitors</li>
+            <li>"Laughing Ladies" tradition page leveraging the WFRV Dish feature as a schema-marked authority asset</li>
+            <li>Friday fish-fry and broasted-chicken funnels marked with Wisconsin supper-club credential schema</li>
+            <li>40-word answer blocks AI engines lift verbatim into Overview answers about Wisconsin butter burgers and heritage family-owned restaurants</li>
+            <li>Performance gate: cited in 4 of 5 AI queries by day 90, or work continues at no additional cost</li>
+          </ul>
+          <a href="../" class="compare-cta cta-new">Open the Demo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bombshell-section">
+  <div class="container">
+    <div class="bombshell-grid">
+      <div>
+        <div class="bombshell-stat">1/5</div>
+        <div class="bombshell-stat-label">AI search citations for Kroll's West across Wisconsin butter burger, best burger Green Bay, and heritage family-owned restaurant queries</div>
+      </div>
+      <div class="bombshell-content">
+        <h2>The Wier family has run the charcoal grill at Kroll's West for three generations.<br>AI search names <em>Solly's first</em> on Wisconsin butter burgers.</h2>
+        <p>We asked ChatGPT, Perplexity, and Google AI Overviews five buyer queries: best butter burger Wisconsin, best burger Green Bay, family-owned Wisconsin restaurant, Packers gameday food traditional, heritage restaurant Green Bay. Kroll's surfaced in <strong>one of five</strong>, on the hyperlocal "restaurants near Lambeau Field" answer where it sits alongside the stadium bars.</p>
+        <p>The other four queries went to Solly's Grille (Milwaukee, 1936 also), Al's Hamburger Shop (downtown Green Bay), AJ Bombers (Milwaukee), and Culver's (chain). Equal in age. Half the heritage. None of them on a charcoal grill across from Lambeau Field. They are winning because their structured data tells AI engines they exist. <strong>The fix is not a rebuild. It is schema, a heritage funnel, a gameday destination pillar, and a Wisconsin supper-club credential page.</strong></p>
+        <div class="competitor-list">
+          <div class="competitor-list-title">Who currently owns "best butter burger Wisconsin" + "best burger Green Bay"</div>
+          <div class="competitor-row"><span>Solly's Grille (Milwaukee, since 1936)</span><span class="rank">#1</span></div>
+          <div class="competitor-row"><span>Al's Hamburger Shop (Green Bay, since 1934)</span><span class="rank">#2</span></div>
+          <div class="competitor-row"><span>AJ Bombers (Milwaukee)</span><span class="rank">#3</span></div>
+          <div class="competitor-row"><span>Culver's (chain)</span><span class="rank">#4</span></div>
+          <div class="competitor-row"><span>Kroll's West (Green Bay, since 1936)</span><span class="rank">Tied #5</span></div>
+          <div class="competitor-row"><span>Dotty Dumpling's &middot; The Plaza &middot; Anchor Bar &middot; Sobelman's</span><span class="rank">Outside top 5</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2 class="section-title">The <em>90-day</em> plan.</h2>
+    <p class="section-sub">Four phases. Heritage funnel ships in less than 7 days. AEO infrastructure deploys in week two. Lambeau gameday destination pillar and Wisconsin supper-club credential page follow. By day 90, Kroll's is cited in 4 of 5 buyer queries and ranking top three on Wisconsin butter burger search.</p>
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <span class="plan-num">Phase 01</span>
+        <h4>Heritage Funnel</h4>
+        <p>Dedicated /charcoal-butter-burger-since-1936 landing page with the 1931 Green Bay hotel origin, 1936 first Kroll's restaurant, Harry and Caroline Kroll, the Labor Temple basement years, and three-generation Wier family stewardship.</p>
+        <span class="plan-week">Week 1</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">Phase 02</span>
+        <h4>AEO Infrastructure</h4>
+        <p>FAQPage, LocalBusiness, FoodEstablishment, Restaurant, and Menu/Product schema deployed across the site. 40-word answer blocks on top 10 pages. Three-generation heritage page schema-marked. Search Console and Bing wired.</p>
+        <span class="plan-week">Week 2 to 3</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">Phase 03</span>
+        <h4>Gameday + Press</h4>
+        <p>Lambeau gameday destination pillar capturing packers.com and onmilwaukee.com dining-guide traffic. "Laughing Ladies" page leveraging the WFRV February 2026 Dish feature as a structured-data authority asset.</p>
+        <span class="plan-week">Weeks 3 to 6</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">Phase 04</span>
+        <h4>Tourism + Funnels</h4>
+        <p>Friday fish-fry and broasted-chicken supper-club credential funnels. Citation outreach to Discover Green Bay, Travel Wisconsin, the Press-Gazette food desk, Atlas Obscura, and the Wisconsin Foodie editorial circuit.</p>
+        <span class="plan-week">Weeks 4 to 12</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The <em>scorecard.</em></h2>
+    <p class="section-sub">Every signal AI search and the Wisconsin butter burger buyer check, the current krollswest.com graded against the 90-day rebuild.</p>
+
+    <div class="scorecard">
+      <div class="scorecard-header">
+        <div>Signal</div>
+        <div>Today</div>
+        <div>After plan</div>
+      </div>
+      <div class="scorecard-row"><div class="scorecard-label">FAQPage + LocalBusiness + FoodEstablishment schema</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Full</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Restaurant + Menu schema with the butter-burger lineup</div><div class="scorecard-cell current">&times; Plain HTML</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Dedicated /charcoal-butter-burger-since-1936 page</div><div class="scorecard-cell current">&times; Buried in /history</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Three-generation Wier family heritage page</div><div class="scorecard-cell current">Buried</div><div class="scorecard-cell new">&check; Pillar</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Lambeau gameday destination pillar</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">"Best butter burger Wisconsin" ranking</div><div class="scorecard-cell current">Tied #5</div><div class="scorecard-cell new">Top 3 target</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">AI Overview citation rate (5 queries)</div><div class="scorecard-cell current">1 of 5</div><div class="scorecard-cell new">4 of 5</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">"Laughing Ladies" WFRV credential surfaced</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">&check; Authority page</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Friday fish fry + broasted chicken funnels</div><div class="scorecard-cell current">Menu line only</div><div class="scorecard-cell new">&check; Funnels</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">40-word answer blocks (AI lift)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; 10+ pages</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Travel Wisconsin + Discover Green Bay citations</div><div class="scorecard-cell current">Directory only</div><div class="scorecard-cell new">10+ schema-cited</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Mobile + page-speed performance</div><div class="scorecard-cell current">Average</div><div class="scorecard-cell new">&check; Sub-2-second</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Design tier</div><div class="scorecard-cell current">C</div><div class="scorecard-cell new">A+</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Harry and Caroline Kroll started this in 1936.<br>The charcoal grill is real. The <em>search</em> isn't.</h2>
+    <p>Solly's and Al's are not winning on the burger. They are winning on schema, on a focused funnel, and on citation density. Let's fix that for the Wier family before the Packers' 2026 home opener locks in.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@andreicopy.net" class="cta-button primary">Book the Strategy Call &rarr;</a>
+      <a href="../" class="cta-button ghost">Open the Demo &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>AG1 Consulting &middot; Andrei Givero &middot; info@andreicopy.net &middot; <a href="https://andrei170.github.io/ag1/">andrei170.github.io/ag1</a></span>
+</footer>
+
+</body>
+</html>

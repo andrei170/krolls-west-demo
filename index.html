@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kroll's West &middot; Charcoal-Grilled Butter Burgers Across From Lambeau Field &middot; Green Bay Since 1936</title>
+<meta name="description" content="Kroll's West has charcoal-grilled Butter Burgers across from Lambeau Field in Green Bay since 1936. Founded by Harry and Caroline Kroll, stewarded by the Wier family for three generations. Butter Burgers, broasted chicken, Friday fish fry, homemade chili, malts. 1990 S. Ridge Rd.">
+<meta property="og:title" content="Kroll's West &middot; Green Bay's Charcoal Butter Burger Since 1936">
+<meta property="og:description" content="Three generations of the Wier family. Charcoal-grilled Butter Burgers across from Lambeau Field. 1990 S. Ridge Rd, Green Bay.">
+<meta property="og:type" content="restaurant.restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crust: #a8552b;
+  --crust-deep: #7a3c1c;
+  --char: #2c1a10;
+  --ember: #c25e2c;
+  --cream: #f5ede2;
+  --bone: #ece1cf;
+  --oven: #3a2618;
+  --oven-deep: #251510;
+  --maroon: #7a2c2c;
+  --maroon-deep: #5a1f1f;
+  --mustard: #b89968;
+  --mustard-deep: #94794d;
+  --supper: #2c4a3a;
+  --supper-deep: #1f3329;
+  --ink: #1c130f;
+  --ink-soft: #4a3a30;
+  --line: #d8c7ad;
+  --white: #ffffff;
+  --display: 'Bebas Neue', sans-serif;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--ink); background: var(--cream);
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+.top-bar {
+  background: var(--oven-deep); color: var(--cream);
+  padding: 11px 0; text-align: center;
+  font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700;
+}
+.top-bar strong { color: var(--mustard); }
+.top-bar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.top-bar-tag { color: var(--mustard); }
+.top-bar-right { display: flex; gap: 18px; align-items: center; font-size: 11px; color: rgba(245, 237, 226, 0.78); letter-spacing: 0.12em; }
+.top-bar-right strong { color: var(--cream); }
+
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--cream); padding: 18px 0;
+  border-bottom: 2px solid var(--oven);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand {
+  color: var(--oven); font-family: var(--serif);
+  font-size: 32px; font-weight: 700; letter-spacing: 0.2px;
+  display: flex; flex-direction: column; line-height: 1;
+}
+.brand-name { color: var(--crust); font-style: italic; }
+.brand-est {
+  font-family: var(--sans); font-size: 10px;
+  letter-spacing: 0.22em; color: var(--mustard-deep); font-weight: 700;
+  margin-top: 5px; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 28px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; align-items: center; }
+.nav-links a { color: var(--oven); transition: color 0.2s; }
+.nav-links a:hover { color: var(--crust); }
+.visit-btn {
+  background: var(--crust); color: var(--cream);
+  padding: 12px 24px; border-radius: 2px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; transition: all 0.2s;
+  border: 2px solid var(--crust); display: inline-block;
+}
+.visit-btn:hover { background: var(--crust-deep); border-color: var(--crust-deep); color: var(--cream); }
+@media (max-width: 980px) { .nav-links { display: none; } }
+
+/* HERO */
+.hero {
+  padding: 96px 0 100px;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--bone) 100%);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -80px; right: -80px;
+  width: 620px; height: 620px;
+  background: radial-gradient(circle, rgba(168, 85, 43, 0.22) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: -10%; left: -10%;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(122, 44, 44, 0.15), transparent 65%);
+  filter: blur(60px); pointer-events: none;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 64px; align-items: center; position: relative; z-index: 2;
+}
+@media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; gap: 48px; } }
+.hero-eyebrow {
+  display: inline-block; padding: 7px 16px;
+  background: var(--maroon); color: var(--cream);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  margin-bottom: 28px; border-radius: 2px;
+}
+.hero h1 {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(42px, 6vw, 76px); line-height: 1.02; color: var(--oven);
+  margin-bottom: 28px; letter-spacing: -0.015em;
+}
+.hero h1 em { color: var(--crust); font-style: italic; }
+.hero-sub {
+  font-size: 19px; color: var(--ink-soft);
+  margin-bottom: 36px; max-width: 580px; line-height: 1.55;
+}
+.hero-features {
+  display: flex; gap: 22px; margin-bottom: 38px; flex-wrap: wrap;
+}
+.hero-feature {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700; color: var(--oven);
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+.hero-feature::before {
+  content: '\2713'; color: var(--crust); font-weight: 700; font-size: 16px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.cta-btn {
+  background: var(--crust); color: var(--cream);
+  padding: 16px 30px; border-radius: 2px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; transition: all 0.2s;
+  border: 2px solid var(--crust); display: inline-block;
+}
+.cta-btn:hover { background: var(--crust-deep); border-color: var(--crust-deep); color: var(--cream); }
+.cta-btn.alt {
+  background: transparent; color: var(--oven); border-color: var(--oven);
+}
+.cta-btn.alt:hover { background: var(--oven); color: var(--cream); }
+
+.hero-vis {
+  aspect-ratio: 4/5;
+  background: linear-gradient(155deg, var(--crust) 0%, var(--crust-deep) 55%, var(--char) 100%);
+  border-radius: 4px; padding: 50px 40px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; position: relative;
+  box-shadow: 0 36px 80px rgba(44, 26, 16, 0.36);
+}
+.hero-vis::before {
+  content: ''; position: absolute; inset: 16px;
+  border: 2px solid rgba(184, 153, 104, 0.32); border-radius: 2px;
+}
+.hero-vis-yr {
+  font-family: var(--display); color: var(--mustard);
+  font-size: 130px; line-height: 0.9; letter-spacing: 4px;
+  position: relative;
+}
+.hero-vis-text {
+  font-family: var(--serif); color: var(--cream);
+  font-size: 22px; margin-top: 22px; font-style: italic;
+  position: relative;
+}
+.hero-vis-rule {
+  width: 60px; height: 2px; background: var(--mustard);
+  margin: 22px auto 18px; position: relative;
+}
+.hero-vis-mark {
+  font-family: var(--sans); font-size: 11px;
+  letter-spacing: 0.28em; color: var(--mustard); font-weight: 700;
+  text-transform: uppercase; position: relative;
+}
+.hero-vis-sub {
+  font-family: var(--sans); font-size: 10px;
+  letter-spacing: 0.22em; color: rgba(245, 237, 226, 0.74);
+  margin-top: 8px; text-transform: uppercase; position: relative;
+}
+
+/* TRUST BAND */
+.trust {
+  background: var(--white); padding: 60px 0;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.trust-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 32px; text-align: center;
+}
+@media (max-width: 768px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
+.trust-item .num {
+  font-family: var(--serif); font-size: 48px; font-weight: 700;
+  color: var(--crust); display: block; line-height: 1;
+  font-style: italic;
+}
+.trust-item .lbl {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-soft); margin-top: 12px; font-weight: 700;
+}
+
+section { padding: 100px 0; }
+.section-header { text-align: center; max-width: 780px; margin: 0 auto 56px; }
+.section-eyebrow {
+  display: inline-block; padding: 6px 14px;
+  background: var(--bone); color: var(--oven);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+  margin-bottom: 20px; border-radius: 2px;
+}
+.section-title {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(34px, 4.6vw, 56px); line-height: 1.05; color: var(--oven);
+  margin-bottom: 18px; letter-spacing: -0.015em;
+}
+.section-title em { font-style: italic; color: var(--crust); }
+.section-sub { font-size: 17px; color: var(--ink-soft); line-height: 1.6; }
+
+/* MENU GRID */
+.menu-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+@media (max-width: 1000px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .menu-grid { grid-template-columns: 1fr; } }
+.menu-item {
+  background: var(--white); border-radius: 4px; overflow: hidden;
+  border: 1px solid var(--line); transition: all 0.3s;
+}
+.menu-item:hover { border-color: var(--mustard); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(58, 38, 24, 0.12); }
+.menu-item.featured { border: 2px solid var(--crust); }
+.menu-item.featured:hover { border-color: var(--crust-deep); }
+.menu-vis {
+  aspect-ratio: 4/3; position: relative;
+  background: linear-gradient(135deg, var(--bone) 0%, var(--cream) 100%);
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--line);
+}
+.menu-vis.crust-bg { background: linear-gradient(135deg, var(--crust) 0%, var(--crust-deep) 100%); }
+.menu-vis.char-bg { background: linear-gradient(135deg, var(--oven) 0%, var(--char) 100%); }
+.menu-vis.mustard-bg { background: linear-gradient(135deg, var(--mustard) 0%, var(--mustard-deep) 100%); }
+.menu-vis.supper-bg { background: linear-gradient(135deg, var(--supper) 0%, var(--supper-deep) 100%); }
+.menu-vis.maroon-bg { background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-deep) 100%); }
+.menu-vis-letter {
+  font-family: var(--display); font-size: 92px; color: var(--cream);
+  letter-spacing: 3px; line-height: 1;
+}
+.menu-vis.mustard-bg .menu-vis-letter { color: var(--oven); }
+.menu-vis-tag {
+  position: absolute; top: 14px; right: 14px;
+  background: var(--mustard); color: var(--oven);
+  padding: 5px 11px; border-radius: 2px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+}
+.menu-vis-tag.signature { background: var(--cream); color: var(--crust); }
+.menu-body { padding: 26px; }
+.menu-name {
+  font-family: var(--serif); font-size: 24px; font-weight: 700;
+  color: var(--oven); margin-bottom: 8px; line-height: 1.15;
+}
+.menu-name em { font-style: italic; color: var(--crust); }
+.menu-desc { font-size: 14px; color: var(--ink-soft); margin-bottom: 18px; line-height: 1.55; }
+.menu-foot {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 16px; border-top: 1px solid var(--line);
+}
+.menu-price {
+  font-family: var(--serif); font-size: 20px; font-weight: 700;
+  color: var(--crust); font-style: italic;
+}
+.menu-cat {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--mustard-deep); font-weight: 700;
+}
+
+/* HERITAGE */
+.heritage { background: var(--oven); color: var(--cream); }
+.heritage-grid {
+  display: grid; grid-template-columns: 1fr 1.25fr;
+  gap: 64px; align-items: center;
+}
+@media (max-width: 980px) { .heritage-grid { grid-template-columns: 1fr; gap: 40px; } }
+.heritage-vis {
+  aspect-ratio: 4/5;
+  background: linear-gradient(160deg, var(--mustard) 0%, var(--mustard-deep) 100%);
+  border-radius: 4px; padding: 48px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; box-shadow: 0 22px 56px rgba(0,0,0,0.36);
+  color: var(--oven); position: relative;
+}
+.heritage-vis::before {
+  content: ''; position: absolute; inset: 16px;
+  border: 2px solid rgba(58, 38, 24, 0.24); border-radius: 2px;
+}
+.heritage-vis-yr {
+  font-family: var(--display); font-size: 140px; line-height: 0.9;
+  letter-spacing: 4px; position: relative;
+}
+.heritage-vis-text {
+  font-family: var(--serif); font-size: 22px; margin-top: 18px;
+  font-style: italic; position: relative;
+}
+.heritage-vis-rule {
+  width: 60px; height: 2px; background: var(--oven);
+  margin: 24px 0 16px; position: relative;
+}
+.heritage-vis-sub {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  font-weight: 700; position: relative;
+}
+.heritage-content .section-eyebrow {
+  background: rgba(184, 153, 104, 0.18); color: var(--mustard);
+}
+.heritage h2 {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(34px, 4.5vw, 54px); line-height: 1.06;
+  margin-bottom: 26px; letter-spacing: -0.015em; color: var(--cream);
+}
+.heritage h2 em { color: var(--mustard); font-style: italic; }
+.heritage p {
+  font-size: 17px; color: rgba(245, 237, 226, 0.84);
+  margin-bottom: 18px; line-height: 1.7;
+}
+.heritage p strong { color: var(--cream); font-weight: 700; }
+.heritage-quote {
+  font-family: var(--serif); font-style: italic;
+  font-size: 21px; color: var(--mustard); padding: 28px 0;
+  border-top: 1px solid rgba(184, 153, 104, 0.32);
+  border-bottom: 1px solid rgba(184, 153, 104, 0.32);
+  margin: 32px 0 18px; line-height: 1.5;
+}
+.heritage-attr {
+  font-size: 13px; color: rgba(245, 237, 226, 0.62);
+  letter-spacing: 0.04em;
+}
+
+/* TIMELINE */
+.timeline-section { background: var(--cream); }
+.timeline-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 4px;
+  padding: 44px 40px; max-width: 920px; margin: 0 auto;
+}
+.timeline-title {
+  font-family: var(--serif); font-style: italic; font-size: 22px;
+  color: var(--crust); margin-bottom: 28px; font-weight: 600; text-align: center;
+}
+.timeline-row {
+  display: grid; grid-template-columns: 110px 1fr;
+  gap: 26px; padding: 20px 0;
+  border-bottom: 1px solid var(--bone);
+}
+.timeline-row:last-child { border-bottom: none; }
+.timeline-row .year {
+  font-family: var(--display); font-size: 30px; color: var(--crust);
+  letter-spacing: 0.05em; line-height: 1.1;
+}
+.timeline-row .desc {
+  font-size: 15px; color: var(--ink-soft); line-height: 1.65;
+}
+.timeline-row .desc strong { color: var(--oven); font-weight: 700; }
+@media (max-width: 640px) {
+  .timeline-row { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }
+  .timeline-row .year { font-size: 26px; }
+}
+
+/* DISAMBIG */
+.disambig { background: var(--bone); padding: 70px 0; }
+.disambig-card {
+  max-width: 900px; margin: 0 auto;
+  background: var(--white); border: 1px solid var(--line); border-left: 4px solid var(--crust);
+  border-radius: 4px; padding: 36px 40px;
+}
+.disambig-card h3 {
+  font-family: var(--serif); font-size: 24px; font-weight: 700;
+  color: var(--oven); margin-bottom: 12px; font-style: italic;
+}
+.disambig-card p {
+  font-size: 16px; color: var(--ink-soft); line-height: 1.7;
+}
+.disambig-card p strong { color: var(--oven); font-weight: 700; }
+
+/* BUTTER BURGER DEEP DIVE */
+.burger { background: var(--bone); }
+.burger-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 64px; align-items: center;
+}
+@media (max-width: 980px) { .burger-grid { grid-template-columns: 1fr; gap: 40px; } }
+.burger-bullets { display: flex; flex-direction: column; gap: 22px; margin-top: 30px; }
+.burger-bullet {
+  display: flex; gap: 18px; align-items: flex-start;
+  padding: 22px 26px; background: var(--white); border-radius: 4px;
+  border-left: 3px solid var(--crust);
+}
+.burger-bullet-num {
+  font-family: var(--display); font-size: 34px; color: var(--crust);
+  line-height: 1; letter-spacing: 2px; flex-shrink: 0;
+}
+.burger-bullet-content h4 {
+  font-family: var(--serif); font-size: 19px; font-weight: 700;
+  color: var(--oven); margin-bottom: 6px;
+}
+.burger-bullet-content p {
+  font-size: 14px; color: var(--ink-soft); line-height: 1.6;
+}
+.burger-vis {
+  aspect-ratio: 1/1;
+  background: linear-gradient(135deg, var(--char) 0%, var(--oven-deep) 100%);
+  border-radius: 4px; padding: 56px 40px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; box-shadow: 0 26px 56px rgba(44, 26, 16, 0.34);
+  color: var(--cream); position: relative;
+}
+.burger-vis::before {
+  content: ''; position: absolute; inset: 16px;
+  border: 2px solid rgba(184, 153, 104, 0.28); border-radius: 2px;
+}
+.burger-vis-num {
+  font-family: var(--display); font-size: 150px; color: var(--ember);
+  line-height: 0.9; letter-spacing: 4px; position: relative;
+}
+.burger-vis-unit {
+  font-family: var(--serif); font-size: 19px;
+  margin-top: 16px; font-style: italic; position: relative;
+  color: var(--mustard);
+}
+.burger-vis-rule {
+  width: 50px; height: 2px; background: var(--mustard);
+  margin: 22px 0 16px; position: relative;
+}
+.burger-vis-mark {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  font-weight: 700; color: var(--mustard); position: relative;
+}
+
+/* GAMEDAY */
+.gameday { background: var(--supper-deep); color: var(--cream); }
+.gameday::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--mustard), transparent);
+}
+.gameday { position: relative; }
+.gameday-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 64px; align-items: center;
+}
+@media (max-width: 980px) { .gameday-grid { grid-template-columns: 1fr; gap: 40px; } }
+.gameday-vis {
+  aspect-ratio: 1/1;
+  background: linear-gradient(155deg, var(--maroon) 0%, var(--maroon-deep) 70%, var(--oven-deep) 100%);
+  border-radius: 4px; padding: 48px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  box-shadow: 0 26px 56px rgba(0,0,0,0.34);
+  position: relative; overflow: hidden;
+}
+.gameday-vis::before {
+  content: ''; position: absolute; inset: 20px;
+  border: 1px solid rgba(184, 153, 104, 0.32); pointer-events: none;
+}
+.gameday-vis-tag {
+  position: relative;
+  color: var(--mustard); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 700;
+}
+.gameday-vis-mid { position: relative; }
+.gameday-vis-mid h3 {
+  font-family: var(--serif); font-style: italic; font-weight: 500;
+  color: var(--cream); font-size: clamp(34px, 3.6vw, 50px); line-height: 1.08;
+}
+.gameday-vis-mid h3 strong { color: var(--mustard); font-style: normal; font-weight: 600; }
+.gameday-vis-rule { width: 60px; height: 2px; background: var(--mustard); margin: 22px 0; position: relative; }
+.gameday-vis-mid p { color: rgba(245, 237, 226, 0.78); font-size: 14px; line-height: 1.6; max-width: 320px; position: relative; }
+.gameday-vis-base { position: relative; display: flex; gap: 28px; }
+.gameday-vis-stat .num { font-family: var(--display); font-size: 42px; color: var(--mustard); line-height: 1; }
+.gameday-vis-stat .lbl { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245, 237, 226, 0.62); margin-top: 6px; font-weight: 600; }
+.gameday-content .section-eyebrow {
+  background: rgba(184, 153, 104, 0.18); color: var(--mustard);
+}
+.gameday h2 {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(34px, 4.4vw, 52px); line-height: 1.05;
+  margin-bottom: 26px; color: var(--cream);
+}
+.gameday h2 em { color: var(--mustard); font-style: italic; }
+.gameday p {
+  font-size: 17px; color: rgba(245, 237, 226, 0.84);
+  margin-bottom: 18px; line-height: 1.7;
+}
+.gameday p strong { color: var(--cream); font-weight: 700; }
+.gameday-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 24px; margin-top: 28px; }
+.gameday-list-item { display: flex; gap: 12px; font-size: 14px; color: rgba(245, 237, 226, 0.88); line-height: 1.5; }
+.gameday-list-item::before { content: '\2713'; color: var(--mustard); font-weight: 700; flex-shrink: 0; }
+@media (max-width: 640px) { .gameday-list { grid-template-columns: 1fr; } }
+
+/* FRIDAY FISH */
+.fish { background: var(--cream); }
+.fish-grid {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 60px; align-items: center;
+}
+@media (max-width: 980px) { .fish-grid { grid-template-columns: 1fr; gap: 40px; } }
+.fish-content h2 {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(32px, 4.2vw, 52px); line-height: 1.05; color: var(--oven);
+  margin-bottom: 24px; letter-spacing: -0.015em;
+}
+.fish-content h2 em { font-style: italic; color: var(--crust); }
+.fish-content p {
+  font-size: 17px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 18px;
+}
+.fish-content p strong { color: var(--oven); }
+.fish-list {
+  background: var(--white); border: 1px solid var(--line); border-radius: 4px;
+  padding: 32px 30px;
+}
+.fish-list-title {
+  font-family: var(--serif); font-style: italic; font-size: 20px;
+  color: var(--crust); margin-bottom: 20px; font-weight: 600;
+}
+.fish-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 0; border-bottom: 1px solid var(--bone);
+  font-size: 15px; color: var(--ink-soft);
+}
+.fish-row:last-child { border-bottom: none; }
+.fish-row strong { color: var(--oven); font-weight: 600; }
+.fish-row span { font-family: var(--serif); font-style: italic; color: var(--crust); font-weight: 700; }
+
+/* HOURS / VISIT */
+.visit-section { background: var(--bone); }
+.visit-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+@media (max-width: 980px) { .visit-grid { grid-template-columns: 1fr; } }
+.visit-card {
+  background: var(--white); padding: 36px 30px; border-radius: 4px;
+  border: 1px solid var(--line);
+}
+.visit-card h4 {
+  font-family: var(--serif); font-size: 22px; font-weight: 700;
+  color: var(--oven); margin-bottom: 8px;
+}
+.visit-card .eyebrow-mini {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--mustard-deep); font-weight: 700; margin-bottom: 14px;
+}
+.visit-card p, .visit-card li {
+  font-size: 15px; color: var(--ink-soft); line-height: 1.65;
+}
+.visit-card ul { list-style: none; }
+.visit-card li { padding: 4px 0; }
+.visit-card strong { color: var(--oven); font-weight: 600; }
+
+/* TESTIMONIALS */
+.testimonials { background: var(--white); }
+.testi-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+@media (max-width: 980px) { .testi-grid { grid-template-columns: 1fr; } }
+.testi {
+  background: var(--cream); padding: 32px; border-radius: 4px;
+  border-left: 4px solid var(--mustard);
+}
+.testi-stars { color: var(--mustard); font-size: 17px; letter-spacing: 2px; margin-bottom: 14px; }
+.testi-quote {
+  font-family: var(--serif); font-size: 18px; font-style: italic;
+  color: var(--oven); margin-bottom: 18px; line-height: 1.5;
+}
+.testi-author { font-size: 13px; color: var(--ink-soft); }
+.testi-author strong { color: var(--oven); display: block; font-style: normal; margin-bottom: 2px; font-weight: 700; }
+
+/* CATERING / GIFT */
+.gift { background: var(--cream); padding: 90px 0; text-align: center; }
+.gift-inner { max-width: 720px; margin: 0 auto; }
+.gift h3 {
+  font-family: var(--serif); font-size: clamp(30px, 3.6vw, 44px);
+  font-weight: 600; color: var(--oven); margin-bottom: 16px; letter-spacing: -0.01em;
+}
+.gift h3 em { font-style: italic; color: var(--crust); }
+.gift p { font-size: 16px; color: var(--ink-soft); margin-bottom: 28px; line-height: 1.65; }
+
+/* FINAL CTA */
+.final-cta {
+  background: linear-gradient(135deg, var(--crust) 0%, var(--crust-deep) 55%, var(--char) 100%);
+  color: var(--cream); text-align: center; padding: 110px 0;
+}
+.final-cta h2 {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(36px, 5vw, 58px); line-height: 1.06;
+  margin-bottom: 22px; letter-spacing: -0.015em;
+}
+.final-cta h2 em { color: var(--mustard); font-style: italic; }
+.final-cta p {
+  font-size: 18px; color: rgba(245, 237, 226, 0.9);
+  max-width: 640px; margin: 0 auto 36px;
+}
+.final-actions {
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+}
+.final-actions .cta-btn {
+  background: var(--mustard); color: var(--oven-deep); border-color: var(--mustard);
+}
+.final-actions .cta-btn:hover { background: var(--cream); border-color: var(--cream); color: var(--oven-deep); }
+.final-actions .cta-btn.alt {
+  background: transparent; color: var(--cream); border-color: var(--cream);
+}
+.final-actions .cta-btn.alt:hover { background: var(--cream); color: var(--crust); border-color: var(--cream); }
+
+footer { background: var(--oven-deep); color: rgba(245, 237, 226, 0.72); padding: 64px 0 28px; }
+.foot-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 44px;
+}
+@media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 540px) { .foot-grid { grid-template-columns: 1fr; } }
+footer h5 {
+  color: var(--mustard); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  margin-bottom: 16px; font-weight: 700;
+}
+footer ul { list-style: none; }
+footer li { margin-bottom: 8px; font-size: 14px; line-height: 1.6; }
+.foot-bottom {
+  border-top: 1px solid rgba(245, 237, 226, 0.12); padding-top: 26px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-size: 12px;
+}
+.foot-brand {
+  font-family: var(--serif); font-size: 30px; font-weight: 700;
+  color: var(--cream); margin-bottom: 4px;
+}
+.foot-brand em { color: var(--mustard); font-style: italic; }
+.foot-est {
+  font-size: 10px; letter-spacing: 0.24em; color: var(--mustard);
+  margin-bottom: 16px; font-weight: 700;
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <span class="top-bar-tag">Charcoal-grilled Butter Burgers across from Lambeau Field</span>
+    <div class="top-bar-right">
+      <span><strong>1990 S. Ridge Rd</strong> &middot; Green Bay</span>
+      <span>Open daily from 10:30am</span>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="brand">
+      <span><span class="brand-name">Kroll's</span> West</span>
+      <span class="brand-est">Green Bay &middot; Est. 1936 &middot; Wier Family</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#butter-burger">The Butter Burger</a>
+      <a href="#gameday">Gameday</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="#visit" class="visit-btn">Visit Today</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow">Charcoal &middot; Family-Owned &middot; Across From Lambeau</div>
+      <h1>Eighty-plus years of Green Bay's original <em>charcoal butter burger.</em></h1>
+      <p class="hero-sub">Harry and Caroline Kroll started serving meals at a Green Bay hotel in 1931 and opened the first Kroll's restaurant in 1936. The Wier family has carried the line through three generations. The grill is still charcoal. The burgers are still finished with butter. The address has been 1990 S. Ridge Road, directly across from Lambeau Field, since 1974.</p>
+      <div class="hero-features">
+        <div class="hero-feature">Family-owned since 1936</div>
+        <div class="hero-feature">Charcoal-grilled every burger</div>
+        <div class="hero-feature">Across from Lambeau Field</div>
+      </div>
+      <div class="hero-actions">
+        <a href="#menu" class="cta-btn">View the Menu</a>
+        <a href="#visit" class="cta-btn alt">Visit Today</a>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="hero-vis-yr">1936</div>
+      <div class="hero-vis-text">Green Bay's original butter burger.</div>
+      <div class="hero-vis-rule"></div>
+      <div class="hero-vis-mark">Kroll's West &middot; S. Ridge Rd</div>
+      <div class="hero-vis-sub">Wier Family &middot; Three Generations</div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <span class="num">89</span>
+      <div class="lbl">Years since the first Kroll's restaurant</div>
+    </div>
+    <div class="trust-item">
+      <span class="num">3</span>
+      <div class="lbl">Generations of family stewardship</div>
+    </div>
+    <div class="trust-item">
+      <span class="num">100%</span>
+      <div class="lbl">Charcoal-grilled, every burger</div>
+    </div>
+    <div class="trust-item">
+      <span class="num">1974</span>
+      <div class="lbl">Across from Lambeau on S. Ridge Rd</div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">The Menu</div>
+      <h2 class="section-title">The Butter Burger. <em>And the supper-club lineup around it.</em></h2>
+      <p class="section-sub">Charcoal grill, broaster, fryer, fish-fry kitchen. The menu has not chased trends in 80 years and that is the whole point. Six anchors carry the line. Everything else gets built around them.</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-item featured">
+        <div class="menu-vis crust-bg">
+          <div class="menu-vis-letter">BB</div>
+          <div class="menu-vis-tag signature">Signature</div>
+        </div>
+        <div class="menu-body">
+          <div class="menu-name">The Original <em>Butter Burger</em></div>
+          <div class="menu-desc">Fresh patty fired over live charcoal, finished with real butter, served on a toasted bun. The burger Harry and Caroline Kroll put on the menu in 1936 and the Wier family has cooked the same way since.</div>
+          <div class="menu-foot">
+            <span class="menu-price">Market</span>
+            <span class="menu-cat">Lunch &middot; Dinner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-vis char-bg">
+          <div class="menu-vis-letter">CB</div>
+          <div class="menu-vis-tag">House made</div>
+        </div>
+        <div class="menu-body">
+          <div class="menu-name">Homemade Chili</div>
+          <div class="menu-desc">Made in the kitchen every morning. Beef, beans, slow simmer. Served by the bowl, on the burger, or over a hot dog. A cold-weather Green Bay staple.</div>
+          <div class="menu-foot">
+            <span class="menu-price">Market</span>
+            <span class="menu-cat">All Day</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-vis mustard-bg">
+          <div class="menu-vis-letter">BC</div>
+        </div>
+        <div class="menu-body">
+          <div class="menu-name">Broasted Chicken</div>
+          <div class="menu-desc">Pressure-fried in the broaster, crispy outside, juicy through. Quarter, half, or family bucket. The Wisconsin supper-club move when the table is not in a burger mood.</div>
+          <div class="menu-foot">
+            <span class="menu-price">Market</span>
+            <span class="menu-cat">Dinner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-vis supper-bg">
+          <div class="menu-vis-letter">FF</div>
+          <div class="menu-vis-tag">Friday only</div>
+        </div>
+        <div class="menu-body">
+          <div class="menu-name">Friday <em>Fish Fry</em></div>
+          <div class="menu-desc">Hand-battered cod, served with potato pancakes or french fries, rye bread, coleslaw, and tartar. The Wisconsin Friday tradition, the way it should be done.</div>
+          <div class="menu-foot">
+            <span class="menu-price">Market</span>
+            <span class="menu-cat">Friday Dinner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-vis maroon-bg">
+          <div class="menu-vis-letter">MS</div>
+        </div>
+        <div class="menu-body">
+          <div class="menu-name">Old-Fashioned Malts &amp; Shakes</div>
+          <div class="menu-desc">Hand-spun behind the counter. Chocolate, vanilla, strawberry, and the seasonal rotation. Built the way malts were built in the 1950s, because that is when the spindle was new.</div>
+          <div class="menu-foot">
+            <span class="menu-price">Market</span>
+            <span class="menu-cat">All Day</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-vis crust-bg">
+          <div class="menu-vis-letter">SO</div>
+          <div class="menu-vis-tag">Daily</div>
+        </div>
+        <div class="menu-body">
+          <div class="menu-name">Homemade Soups</div>
+          <div class="menu-desc">Rotated daily from the kitchen. Chicken dumpling, beef vegetable, clam chowder Friday, cream of mushroom. Ask the counter what's on this morning.</div>
+          <div class="menu-foot">
+            <span class="menu-price">Market</span>
+            <span class="menu-cat">Lunch &middot; Dinner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="heritage">
+  <div class="container heritage-grid">
+    <div class="heritage-vis">
+      <div class="heritage-vis-yr">1936</div>
+      <div class="heritage-vis-text">The first Kroll's restaurant.</div>
+      <div class="heritage-vis-rule"></div>
+      <div class="heritage-vis-sub">Three Generations &middot; One Family</div>
+    </div>
+    <div class="heritage-content">
+      <div class="section-eyebrow">Our Story</div>
+      <h2>Harry and Caroline Kroll. The basement under the Labor Temple. <em>Three generations</em> of the Wier family.</h2>
+      <p>The story starts in 1931, when <strong>Harry and Caroline Kroll</strong> began serving meals at a family-run hotel in Green Bay. The food was popular enough that in 1936 they opened the first official Kroll's restaurant at 1658 Main Street. That is where the Kroll's Hamburger went on the menu, on the charcoal grill, finished with butter, on a toasted bun. The version every Wisconsin butter burger ever served has been measured against since.</p>
+      <p>Before World War II the restaurant moved to the basement under the Labor Temple Auditorium. <strong>Harry's daughter Pat</strong> kept the basement line running for years, then moved the operation south. In 1974, the address became 1990 S. Ridge Road, directly across from Lambeau Field, where it has been since.</p>
+      <p>The third generation runs the kitchen today. <strong>Bobbie Van Der Perren Wier and her husband Mike Wier</strong> are the current stewards. Mike started working at Kroll's at 15. He has been in the building for nearly six decades. The grill is still charcoal. The chili is still made in the morning. The fish fry is still hand-battered on Friday.</p>
+      <div class="heritage-quote">"One of the key reasons for Kroll's West's success is our charcoal grilling method, which gives our burgers and sandwiches their signature smoky flavor."</div>
+      <div class="heritage-attr">Kroll's West, history page</div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">A Short Timeline</div>
+      <h2 class="section-title">Ninety-five years from a hotel kitchen to <em>S. Ridge Road.</em></h2>
+    </div>
+
+    <div class="timeline-card">
+      <div class="timeline-title">The Kroll's line, in order.</div>
+
+      <div class="timeline-row">
+        <div class="year">1931</div>
+        <div class="desc"><strong>Harry and Caroline Kroll</strong> begin serving meals at a family-run hotel in Green Bay. The food is popular enough that customers ask for the burger by name.</div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="year">1936</div>
+        <div class="desc"><strong>The first Kroll's restaurant opens at 1658 Main Street.</strong> The Kroll's Hamburger goes on the menu, finished with butter, fired over charcoal. The recipe has not changed in nearly nine decades.</div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="year">Pre-WWII</div>
+        <div class="desc"><strong>The restaurant moves to the basement under the Labor Temple Auditorium.</strong> Harry's daughter Pat works the line with her parents and learns the kitchen.</div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="year">1974</div>
+        <div class="desc"><strong>Pat moves the operation to 1990 S. Ridge Road,</strong> directly across from Lambeau Field. The restaurant becomes known as Kroll's West. The grill is still charcoal. The address has been the same since.</div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="year">Today</div>
+        <div class="desc"><strong>Bobbie Van Der Perren Wier and Mike Wier</strong> run the kitchen as the third generation. Mike started at 15 and has spent nearly six decades on the line. Charcoal grill, hand-battered fish fry, broasted chicken, homemade chili.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="disambig">
+  <div class="container">
+    <div class="disambig-card">
+      <h3>A note on the name.</h3>
+      <p>There are two Kroll's restaurants in Green Bay. They share a family origin and the 1936 founding by Harry and Caroline Kroll, and <strong>they are separately owned and operated.</strong> Kroll's West, the restaurant on S. Ridge Road across from Lambeau Field, has been stewarded by the Wier family for three generations. If you are looking for the original Wier-family Kroll's West, you are in the right place.</p>
+    </div>
+  </div>
+</section>
+
+<section id="butter-burger" class="burger">
+  <div class="container burger-grid">
+    <div>
+      <div class="section-eyebrow">The Butter Burger</div>
+      <h2 class="section-title">The Wisconsin butter burger, <em>cooked the way it was meant to be.</em></h2>
+      <p class="section-sub">Wisconsin has more than one butter burger. Solly's in Milwaukee built theirs on the griddle. Kroll's built theirs on the charcoal grill. Both are right. Only one of them was on a Green Bay menu in 1936.</p>
+
+      <div class="burger-bullets">
+        <div class="burger-bullet">
+          <div class="burger-bullet-num">01</div>
+          <div class="burger-bullet-content">
+            <h4>Live charcoal, not a flat top</h4>
+            <p>The grill is fired with Kingsford. The smoke gets into the patty. That is what makes a Kroll's burger taste different from a butter burger you eat anywhere else.</p>
+          </div>
+        </div>
+        <div class="burger-bullet">
+          <div class="burger-bullet-num">02</div>
+          <div class="burger-bullet-content">
+            <h4>Finished with real butter, not margarine</h4>
+            <p>A pat of butter melts into the patty as it comes off the grill. The bun gets buttered too. The fat is the point.</p>
+          </div>
+        </div>
+        <div class="burger-bullet">
+          <div class="burger-bullet-num">03</div>
+          <div class="burger-bullet-content">
+            <h4>Toasted bun, never steamed</h4>
+            <p>The bun is buttered and pressed on the grill until the crust is set. It holds the patty, the butter, and the toppings without going soft.</p>
+          </div>
+        </div>
+        <div class="burger-bullet">
+          <div class="burger-bullet-num">04</div>
+          <div class="burger-bullet-content">
+            <h4>The recipe has not changed since 1936</h4>
+            <p>Three generations of the Wier family have kept the same method. The Kroll's Hamburger Harry and Caroline put on the menu in 1936 is the one you are ordering today.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="burger-vis">
+      <div class="burger-vis-num">89</div>
+      <div class="burger-vis-unit">years on the charcoal grill</div>
+      <div class="burger-vis-rule"></div>
+      <div class="burger-vis-mark">Same recipe &middot; Same method</div>
+    </div>
+  </div>
+</section>
+
+<section id="gameday" class="gameday">
+  <div class="container gameday-grid">
+    <div class="gameday-vis">
+      <div class="gameday-vis-tag">Across from Lambeau Field</div>
+      <div class="gameday-vis-mid">
+        <h3>The pregame stop that's older than <strong>most of the Packers' Hall of Fame.</strong></h3>
+        <div class="gameday-vis-rule"></div>
+        <p>Kroll's West has been across the road from Lambeau Field since the Vince Lombardi era. Game day at the bar is its own ritual.</p>
+      </div>
+      <div class="gameday-vis-base">
+        <div class="gameday-vis-stat">
+          <div class="num">9+</div>
+          <div class="lbl">Home games / year</div>
+        </div>
+        <div class="gameday-vis-stat">
+          <div class="num">1974</div>
+          <div class="lbl">Across from Lambeau</div>
+        </div>
+      </div>
+    </div>
+    <div class="gameday-content">
+      <div class="section-eyebrow">Packers gameday</div>
+      <h2>Pregame, postgame, every <em>Sunday in Green Bay.</em></h2>
+      <p>Lambeau Field opens for Packers home games nine times a year. Every Sunday morning at Kroll's looks the same: green-and-gold filling the dining room, the bar three deep, charcoal burgers off the grill, broasted chicken trays going out the door.</p>
+      <p><strong>The Lambeau dining guides on packers.com and onmilwaukee.com both name Kroll's West as the pregame stop.</strong> The road from the parking lot to the stadium runs past our front door. The fans who walk in are not strangers.</p>
+      <div class="gameday-list">
+        <div class="gameday-list-item">Open from 10:30am every gameday Sunday</div>
+        <div class="gameday-list-item">Full bar, big draft list, classic supper-club cocktails</div>
+        <div class="gameday-list-item">Burgers and broasted chicken to-go for tailgates</div>
+        <div class="gameday-list-item">Counter seating, table service, and the bar TVs</div>
+        <div class="gameday-list-item">Visited by Packers alumni for forty-plus years</div>
+        <div class="gameday-list-item">Parking on-site, walking distance to the gate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fish">
+  <div class="container fish-grid">
+    <div class="fish-content">
+      <div class="section-eyebrow">Friday in Wisconsin</div>
+      <h2>The Wisconsin Friday fish fry, <em>done the way it was meant to be done.</em></h2>
+      <p>Wisconsin has a Friday tradition. Every supper club, tavern, parish hall, and family kitchen runs a fish fry at the end of the week. Kroll's West has been part of that line since the original menu.</p>
+      <p><strong>Hand-battered cod, potato pancakes or french fries, rye bread, coleslaw, tartar.</strong> The order has not changed. The rye bread is on the table before the basket. The tartar is made in the kitchen.</p>
+      <p>Walk-in seating most of the night. Reservation calls welcome for tables of six or more. Friday is the busiest night of the week, and that is on purpose.</p>
+    </div>
+
+    <div class="fish-list">
+      <div class="fish-list-title">The Friday plate.</div>
+      <div class="fish-row">
+        <strong>Hand-battered cod</strong>
+        <span>Two pieces &middot; Three pieces</span>
+      </div>
+      <div class="fish-row">
+        <strong>Potato pancakes</strong>
+        <span>House recipe</span>
+      </div>
+      <div class="fish-row">
+        <strong>French fries</strong>
+        <span>Substitute available</span>
+      </div>
+      <div class="fish-row">
+        <strong>Rye bread</strong>
+        <span>On the table</span>
+      </div>
+      <div class="fish-row">
+        <strong>Coleslaw</strong>
+        <span>House dressing</span>
+      </div>
+      <div class="fish-row">
+        <strong>Tartar sauce</strong>
+        <span>Made in the kitchen</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Visit Kroll's West</div>
+      <h2 class="section-title">Across the road from <em>Lambeau Field.</em></h2>
+      <p class="section-sub">The same address since 1974. Open every day at 10:30am. Walk in, sit at the counter or a booth, watch the charcoal grill from the dining room.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="visit-card">
+        <div class="eyebrow-mini">Address</div>
+        <h4>1990 S. Ridge Road</h4>
+        <p>Green Bay, Wisconsin 54304<br>Directly across from Lambeau Field</p>
+        <p style="margin-top: 14px;"><strong>Parking:</strong> On-site lot. Walking distance to the Lambeau gates on gameday Sundays.</p>
+      </div>
+
+      <div class="visit-card">
+        <div class="eyebrow-mini">Hours</div>
+        <h4>Open every day</h4>
+        <ul>
+          <li><strong>Sun &ndash; Thu:</strong> 10:30am to close</li>
+          <li><strong>Fri &ndash; Sat:</strong> 10:30am to close</li>
+          <li><strong>Friday Fish Fry:</strong> Served all evening</li>
+        </ul>
+        <p style="margin-top: 14px;"><strong>Gameday Sundays:</strong> Pregame from 10:30am. Bar opens with the kitchen.</p>
+      </div>
+
+      <div class="visit-card">
+        <div class="eyebrow-mini">First Visit</div>
+        <h4>What to expect</h4>
+        <p>The counter is open, the bar is open, the booths are open. Charcoal grill in view of the dining room. Family-style service. The Original Butter Burger, the homemade chili, and a malt is the standard first order. Most people order the same the second time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">What Green Bay Says</div>
+      <h2 class="section-title">Three generations of <em>Packers fans, neighbors, regulars.</em></h2>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-quote">[Testimonial placeholder &middot; Green Bay regular, charcoal butter burger order. Real review to be added from Google / Yelp with permission.]</div>
+        <div class="testi-author"><strong>[Name]</strong>Green Bay, WI</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-quote">[Testimonial placeholder &middot; Packers fan / visiting tailgater. Real review to be added from Tripadvisor with permission.]</div>
+        <div class="testi-author"><strong>[Name]</strong>[City], [State]</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-quote">[Testimonial placeholder &middot; Multi-generation Green Bay family customer, Friday fish fry standing order. Real review to be added.]</div>
+        <div class="testi-author"><strong>[Name]</strong>Green Bay, WI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gift">
+  <div class="container gift-inner">
+    <div class="section-eyebrow">Gift Cards &amp; To-Go</div>
+    <h3>Take Kroll's home. <em>Or send it to someone.</em></h3>
+    <p>Gift cards in the dining room or by phone. Family-size broasted chicken buckets, burger orders, and Friday fish-fry packs available to-go. Pickup at the counter, parking on-site, the same charcoal burger you would get at the booth.</p>
+    <a href="#visit" class="cta-btn">Call to Order</a>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2>Green Bay's charcoal butter burger. <em>Across from Lambeau since 1974.</em></h2>
+    <p>Eighty-plus years of the Kroll's family. Three generations of the Wier family. The same charcoal grill, the same butter, the same toasted bun. Open every day from 10:30am.</p>
+    <div class="final-actions">
+      <a href="#visit" class="cta-btn">Plan Your Visit</a>
+      <a href="#menu" class="cta-btn alt">See the Menu</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><em>Kroll's</em> West</div>
+        <div class="foot-est">GREEN BAY &middot; EST 1936 &middot; WIER FAMILY</div>
+        <p style="font-size: 14px; line-height: 1.65;">Charcoal-grilled Butter Burgers, broasted chicken, Friday fish fry, and homemade chili across from Lambeau Field. Founded by Harry and Caroline Kroll in 1936, stewarded by the Wier family for three generations.</p>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li>1990 S. Ridge Road</li>
+          <li>Green Bay, WI 54304</li>
+          <li>Across from Lambeau Field</li>
+          <li><br></li>
+          <li>Open daily 10:30am to close</li>
+          <li>Friday fish fry all evening</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Menu</h5>
+        <ul>
+          <li><a href="#menu">The Butter Burger</a></li>
+          <li><a href="#menu">Homemade Chili</a></li>
+          <li><a href="#menu">Broasted Chicken</a></li>
+          <li><a href="#menu">Friday Fish Fry</a></li>
+          <li><a href="#menu">Malts &amp; Shakes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>The Family</h5>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#butter-burger">The Butter Burger</a></li>
+          <li><a href="#gameday">Packers Gameday</a></li>
+          <li><a href="#visit">Plan a Visit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 Kroll's West. Family-owned by the Wier family, est. 1936. All rights reserved.</div>
+      <div>Demo by AG1 Consulting &middot; andrei170.github.io/krolls-west-demo/</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
